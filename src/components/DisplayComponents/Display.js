@@ -5,7 +5,7 @@ const Display = (props) => {
     
     /* Display any props data here */
 
-    props.number
+    props.display
   // if (props.number){
   //   return props.number
   // } else if (props.operator){

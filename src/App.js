@@ -22,25 +22,28 @@ function App() {
     const [numberFor, setNumberFor] = useState(numbers);
     const [specialVal, setSpecialVal] = useState(specials);
     const [operatorVal, setOperatorVal] = useState(operators);
+    const [displayVal, setDisplayVal] = useState(0);
 
     const enterNum = () => {
-      setNumberFor(numberFor + 1)
+      setNumberFor(numberFor)
     }
     const enterOperator = () => {
-      setOperatorVal(specialVal + 1)
+      setOperatorVal(specialVal)
     }
     const enterSpecial = () => {
-      setSpecialVal(operatorVal + 1 )
+      setSpecialVal(operatorVal)
     }
+   
+
 
   return (
     <div className="container">
       <Logo />
       <div className="App">
-        <Display number={numberFor} operator={enterOperator} special={enterSpecial}/>
-        <Numbers  numberFor={numberFor}/>
-        <Operators operatorVal={operatorVal}/>
-        <Specials specialVal={specialVal}/>
+        <Display display={displayVal} operator={enterOperator} special={enterSpecial}/>
+        <Numbers onClick={()=> (setDisplayVal(displayVal = numberFor))} numberFor={numberFor}/>
+        <Operators onClick={()=> (setDisplayVal(displayVal = operatorVal))} operatorVal={operatorVal}/>
+        <Specials onClick={()=> (setDisplayVal(displayVal = specialVal))} specialVal={specialVal}/>
         
         
       </div>
