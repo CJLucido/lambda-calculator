@@ -23,11 +23,21 @@ function App() {
     const [specialVal, setSpecialVal] = useState(specials);
     const [operatorVal, setOperatorVal] = useState(operators);
 
+    const enterNum = () => {
+      setNumberFor(numberFor + 1)
+    }
+    const enterOperator = () => {
+      setOperatorVal(specialVal + 1)
+    }
+    const enterSpecial = () => {
+      setSpecialVal(operatorVal + 1 )
+    }
+
   return (
     <div className="container">
       <Logo />
       <div className="App">
-        <Display number={numberFor} operator={operatorVal} special ={specialVal}/>
+        <Display number={enterNum} operator={enterOperator} special={enterSpecial}/>
         <Numbers  numberFor={numberFor}/>
         <Operators operatorVal={operatorVal}/>
         <Specials specialVal={specialVal}/>
