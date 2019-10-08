@@ -20,6 +20,7 @@ function App() {
   // Don't forget to pass the functions (and any additional data needed) to the components as props
 
     const [numberFor] = useState(numbers)
+    const [specialVal] = useState(specials);
 
   return (
     <div className="container">
@@ -28,7 +29,7 @@ function App() {
         <Display/>
         <Numbers  numberFor={numberFor}/>
         <Operators/>
-        <Specials/>
+        <Specials specialVal={specialVal}/>
         
         
       </div>
