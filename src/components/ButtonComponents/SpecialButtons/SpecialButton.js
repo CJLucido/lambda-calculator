@@ -3,7 +3,7 @@ import React from "react";
 const SpecialButton = (props) => {
   return (
     <button>
-      {props.seen}
+      {props.specVal}
     </button>
   );
 };
