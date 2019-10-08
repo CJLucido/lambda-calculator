@@ -37,7 +37,7 @@ function App() {
     <div className="container">
       <Logo />
       <div className="App">
-        <Display number={enterNum} operator={enterOperator} special={enterSpecial}/>
+        <Display number={numberFor} operator={enterOperator} special={enterSpecial}/>
         <Numbers  numberFor={numberFor}/>
         <Operators operatorVal={operatorVal}/>
         <Specials specialVal={specialVal}/>
