@@ -1,5 +1,5 @@
-import React, {useState} from "react";
-import {operators} from "../../../data";
+import React from "react";  //removed on conversion  {useState}
+//import {operators} from "../../../data";
 import OperatorButton from "./OperatorButton";
 
 

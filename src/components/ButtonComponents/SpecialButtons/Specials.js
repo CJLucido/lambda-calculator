@@ -1,5 +1,5 @@
-import React, {useState} from "react";
-import {specials} from "../../../data";
+import React from "react";//removed on conversion  {useState}
+//import {specials} from "../../../data";
 import SpecialButton from "./SpecialButton";
 
 

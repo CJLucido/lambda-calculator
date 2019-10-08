@@ -1,5 +1,5 @@
-import React, {useState} from "react";
-import {numbers} from "../../../data";
+import React from "react"; //removed on conversion  {useState}
+//import {numbers} from "../../../data";
 import NumberButton from "./NumberButton"
 
 
