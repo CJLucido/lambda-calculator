@@ -28,7 +28,7 @@ function App() {
 
   const displayNum = (value) => (setDisplayVal(displayVal = value));
   const displayOperator = (value)=> (setDisplayVal(displayVal = value));
-  const displaySpecial = () => (setDisplayVal(displayVal = specialVal))
+  const displaySpecial = (value) => (setDisplayVal(displayVal = value))
 
 
   return (
