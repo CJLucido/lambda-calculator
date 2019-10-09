@@ -19,31 +19,26 @@ function App() {
   // the "5" button, or the operator if they click one of those buttons) and then call your setter function to update state.
   // Don't forget to pass the functions (and any additional data needed) to the components as props
 
-    const [numberFor, setNumberFor] = useState(numbers);
-    const [specialVal, setSpecialVal] = useState(specials);
-    const [operatorVal, setOperatorVal] = useState(operators);
-    const [displayVal, setDisplayVal] = useState(0);
+    const [numberFor] = useState(numbers);
+    const [specialVal] = useState(specials);
+    const [operatorVal] = useState(operators);
+    let [displayVal, setDisplayVal] = useState(0);
 
-    const enterNum = () => {
-      setNumberFor(numberFor)
-    }
-    const enterOperator = () => {
-      setOperatorVal(specialVal)
-    }
-    const enterSpecial = () => {
-      setSpecialVal(operatorVal)
-    }
-   
+  //function to pass down to buttons (Steve Morehead's idea)
+
+  const displayNum = (value) => (setDisplayVal(displayVal = value));
+  const displayOperator = ()=> (setDisplayVal(displayVal = operatorVal));
+  const displaySpecial = () => (setDisplayVal(displayVal = specialVal))
 
 
   return (
     <div className="container">
       <Logo />
       <div className="App">
-        <Display display={displayVal} operator={enterOperator} special={enterSpecial}/>
-        <Numbers onClick={()=> (setDisplayVal(displayVal = numberFor))} numberFor={numberFor}/>
-        <Operators onClick={()=> (setDisplayVal(displayVal = operatorVal))} operatorVal={operatorVal}/>
-        <Specials onClick={()=> (setDisplayVal(displayVal = specialVal))} specialVal={specialVal}/>
+        <Display display={displayVal}/>
+        <Numbers changeDisplay={displayNum} numberFor={numberFor}/>
+        <Operators changeDisplay={displayOperator} operatorVal={operatorVal}/>
+        <Specials changeDisplay={displaySpecial} specialVal={specialVal}/>
         
         
       </div>

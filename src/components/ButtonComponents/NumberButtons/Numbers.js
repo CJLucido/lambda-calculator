@@ -22,7 +22,7 @@ import { numbers } from '../../../data'
   return (
     <div className="numbers">
       {props.numberFor.map((button, index) => (
-        <NumberButton key={index} numberVal={button}/>
+        <NumberButton key={index} numberVal={button} displayNum={props.changeDisplay}/>
       ))}
     </div>
   );
