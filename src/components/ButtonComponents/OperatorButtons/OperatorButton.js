@@ -1,8 +1,10 @@
 import React from "react";
 
 const OperatorButton = (props) => {
+ 
+
   return (
-    <button>
+    <button onClick={() => props.displayOp(props.operatorVal.char)}>
       {props.operatorVal.char}
     </button>
   );

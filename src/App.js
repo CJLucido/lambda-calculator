@@ -27,7 +27,7 @@ function App() {
   //function to pass down to buttons (Steve Morehead's idea)
 
   const displayNum = (value) => (setDisplayVal(displayVal = value));
-  const displayOperator = ()=> (setDisplayVal(displayVal = operatorVal));
+  const displayOperator = (value)=> (setDisplayVal(displayVal = value));
   const displaySpecial = () => (setDisplayVal(displayVal = specialVal))
 
 

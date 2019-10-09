@@ -17,7 +17,7 @@ const Operators = (props) => {
   return (
     <div className="operators">
       {props.operatorVal.map((button, index) => (
-              <OperatorButton key={index} operatorVal={button}/>
+              <OperatorButton key={index} operatorVal={button} displayOp={props.changeDisplay}/>
           ))}
     </div>
   );
